@@ -1,21 +1,95 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Healthcare Comany Landing Page</title>
-   <!-- Bootstrap -->
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-</head>
-<body>
-  <div class="container">
-    <h1>Webpage title</h1>
-    <p>A little description about what to do</p>
-    <p>This is a test to see if it auto-updates</p>
-    <p>Go to azure webapp: <a class="btn btn-default" href="https://sebtestwebappfakename.azurewebsites.net/" role="button">Enter</a></p>
-    <p>This is a link to google: <a class="btn btn-default" href="http://www.google.com" role="button">Enter</a></p>
-    <p>Go to google:<a class="btn btn-default" href="http://www.google.com" role="button">Enter</a></p>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div class="card bg-dark text-white mb-3 mt-3">
+        <img src="assets/img/double_helix.jpg" class="card-img" alt="...">
+        <div class="card-img-overlay">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text">Last updated 3 mins ago</p>
+        </div>
+      </div>
+
+
+    <div class="row">
+
+      <div class="card col-md-4">
+        <img src="assets/img/pill.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Patient Prescription Lookup</h5>
+          <a class="btn btn-primary" href="http://www.google.com" role="button">Enter</a>
+          <p class="card-text">Possimus quia velit quaerat. Provident quia incidunt odio sint illum harum officiis id.</p>
+        </div>
+      </div>
+      <div class="card col-md-4">
+        <img src="assets/img/blood_pressure_monitor.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Stroke Risk Predictive service</h5>
+          <a class="btn btn-primary" href="http://www.google.com" role="button">Enter</a>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+        </div>
+      </div>
+      <div class="card col-md-4">
+        <img src="assets/img/blood_pressure_monitor.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Stroke Risk Predictive service</h5>
+          <a class="btn btn-primary" href="http://www.google.com" role="button">Enter</a>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+        </div>
+      </div>
+      <div class="card col-md-4">
+        <img src="assets/img/call-centre.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Chat Bot Help Center</h5>
+          <a class="btn btn-primary" href="http://www.google.com" role="button">Enter</a>
+          <p class="card-text">Et molestiae assumenda impedit ab non. Voluptates cum tempore ea consequuntur expedita aperiam exercitationem. Facere culpa ipsam placeat recusandae provident.</p>
+        </div>
+      </div>
+    </div>
   </div>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
 </html>
