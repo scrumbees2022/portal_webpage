@@ -67,6 +67,15 @@
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
       }
+
+      .modal.custom .modal-dialog {
+          max-width: 300px;
+          width:100%;
+          position:fixed;
+          bottom:0;
+          right:0;
+          margin:0;
+      }
     </style>
 
     
@@ -146,10 +155,37 @@
         <h2 class="fw-normal">ChatBot</h2>
         <p>Questions? Our AI chatbot can help you!</p>
         <p><a class="btn btn-secondary" href="chatbot.html">View details &raquo;</a></p>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Launch chat box
+        </button>
       </div><!-- /.col-lg-4 -->
     </div><!-- /.row -->
 
 
+
+<!-- Modal -->
+<div class="modal custom fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content" style="height:80vh">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">AI ChatBot</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <iframe id="chatbot" style='width:100%; height:100%;position:absolute;'src="#"></iframe>
+  
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
     <!-- START THE FEATURETTES -->
 <!-- 
     <hr class="featurette-divider">
@@ -201,13 +237,35 @@
   <!-- FOOTER -->
   <footer class="container">
     <p class="float-end"><a href="#">Back to top</a></p>
-    <p>&copy; 2017–2022 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    <p>&copy; 2022 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
   </footer>
 </main>
 
 
     <script src="assets/js/bootstrap.bundle.min.js"></script>
-
+    <script type="text/javascript">
+      var reader = new XMLHttpRequest() || new ActiveXObject('MSXML2.XMLHTTP');
+      
+      function loadFile() {
+          reader.open('get', 'chatbot.html', true); 
+          reader.onreadystatechange = displayContents;
+          reader.send(null);
+      }
+      
+      function displayContents() {
+          if(reader.readyState==4) {
+              const re = /https:[^'"\s]*/g;
+              // console.log(reader.responseText);
+              const new_url = reader.responseText.match(re)[0];
+              // console.log(new_url);
+              var el = document.getElementById('chatbot');
+              // console.log(el.getAttribute("src"))
+              el.setAttribute("src", new_url);
+              // el.innerHTML = reader.responseText;
+          }
+      }
+      loadFile()
+      </script>
       
   </body>
 </html>
